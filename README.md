@@ -22,6 +22,26 @@ Bạn có thể chạy từng bench độc lập bằng lệnh `bench start` tro
 pip install frappe-bench
 ```
 
+### Thiết lập môi trường sau khi clone
+
+Sau khi clone repo, vào đúng thư mục bench rồi cài requirements và build assets:
+
+```bash
+# ví dụ: firstsite
+cd firstsite
+bench setup requirements   # cài Python & Node deps theo các app trong bench
+bench build                # build assets
+
+# lặp lại tương tự cho frappe-bench, inventory-pos khi cần
+```
+
+Nếu cần tạo/đặt lại DB theo đúng `site_config.json` đã commit, đảm bảo bạn có MariaDB đang chạy và user/password khớp với cấu hình trong `sites/<site>/site_config.json`. Ví dụ:
+
+```bash
+# ví dụ cho library.localhost
+bench --site library.localhost migrate
+```
+
 ---
 
 ## Cấu hình hosts (bắt buộc)
@@ -58,6 +78,13 @@ bench build
 bench --site library.localhost migrate
 ```
 
+- Cài deps lần đầu sau khi clone:
+
+```bash
+bench setup requirements
+bench build
+```
+
 ### 2) frappe-bench
 
 ```bash
@@ -73,6 +100,13 @@ bench --site d-code.localhost migrate
 bench --site development.localhost migrate
 ```
 
+- Cài deps lần đầu sau khi clone:
+
+```bash
+bench setup requirements
+bench build
+```
+
 ### 3) inventory-pos
 
 ```bash
@@ -81,6 +115,13 @@ bench start
 ```
 
 - Truy cập: http://pos.localhost:8000
+
+- Cài deps lần đầu sau khi clone:
+
+```bash
+bench setup requirements
+bench build
+```
 
 ---
 

@@ -37,17 +37,20 @@ sites/assets/
 */sites/assets/
 site-*/
 
-# Bench/site configs (secrets!)
-sites/common_site_config.json
-*/sites/common_site_config.json
-sites/*/site_config.json
-*/sites/*/site_config.json
+# Bench/site configs (now included per request)
+# WARNING: committing these exposes DB credentials. Keep repo private.
+# (If you later want to exclude again, uncomment the lines below)
+# sites/common_site_config.json
+# */sites/common_site_config.json
+# sites/*/site_config.json
+# */sites/*/site_config.json
 
-# Redis ACL/CONF (sensitive)
-config/redis_*.acl
-config/redis_*.conf
-*/config/redis_*.acl
-*/config/redis_*.conf
+# Redis ACL/CONF (now included per request)
+# WARNING: these may contain sensitive rules/passwords.
+# config/redis_*.acl
+# config/redis_*.conf
+# */config/redis_*.acl
+# */config/redis_*.conf
 
 # Lock files & caches
 config/bench_build.lock
