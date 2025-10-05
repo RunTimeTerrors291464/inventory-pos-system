@@ -1,0 +1,88 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Node
+node_modules/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environments
+env/
+*/env/
+.venv/
+.conda/
+
+# Frappe/Bench generated files
+*.pyc
+*.swp
+*.swo
+.DS_Store
+
+# Logs and PIDs
+logs/
+*/logs/
+*.log
+pids/
+*/pids/
+
+# Bench build artifacts
+sites/assets/
+*/sites/assets/
+site-*/
+
+# Bench/site configs (secrets!)
+sites/common_site_config.json
+*/sites/common_site_config.json
+sites/*/site_config.json
+*/sites/*/site_config.json
+
+# Redis ACL/CONF (sensitive)
+config/redis_*.acl
+config/redis_*.conf
+*/config/redis_*.acl
+*/config/redis_*.conf
+
+# Lock files & caches
+config/bench_build.lock
+*/config/bench_build.lock
+*.lock
+.cache/
+.cache/**
+
+# Cypress/coverage/tmp
+coverage/
+.cypress-cache/
+.cypress/
+/tmp/
+
+# IDE/editor
+.vscode/
+.idea/
+*.code-workspace
+
+# Backups and exports
+private/backups/
+backups/
+*/backups/
+*.sql
+*.sql.gz
+*.tar
+*.tar.gz
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Misc
+bench-repo/
+patches.txt
+
+# Exclude nested git repositories (use submodules if needed)
+**/.git/
